@@ -21,13 +21,9 @@ if (!API_KEY) {
   );
 }
 
-// Base URL — replace with the correct Crossmint base for staging/production per their docs
-const BASE = "https://api.crossmint.com"; // <- check docs; this is a placeholder
-
 async function createWalletServer({ email }) {
-  // Replace with actual Crossmint API endpoint / payload from the docs
   // Example pseudo-request:
-  const url = `${BASE}/v1/wallets`; // confirm path in docs
+  const url = `https://staging.crossmint.com/api/2025-06-09/wallets`; // confirm path in docs
   const body = {
     projectId: PROJECT_ID,
     metadata: { email },
@@ -52,8 +48,7 @@ async function sendTxServer({
   token = "USDC",
   chain = "polygon",
 }) {
-  // Replace with actual Crossmint transfer endpoint and body
-  const url = `${BASE}/v1/transactions`; // confirm path in docs
+  const url = `https://staging.crossmint.com/api/2025-06-09/wallets/{walletLocator}/transactions`; // confirm path in docs
   const body = {
     projectId: PROJECT_ID,
     from,
