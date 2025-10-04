@@ -33,7 +33,7 @@ export default function App() {
         to,
         amount,
         token: "USDC",
-        chain: "polygon"
+        chain: "solana"
       });
       pushLog(`Tx submitted: ${res.txHash || "no-tx-hash-returned"}`);
     } catch (e: any) {

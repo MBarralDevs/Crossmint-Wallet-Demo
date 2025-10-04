@@ -27,7 +27,10 @@ async function createWalletServer({ email }) {
   const body = {
     projectId: PROJECT_ID,
     metadata: { email },
-    // any other required fields per Crossmint docs
+    chainType: "solana", // or "evm"
+    type: "smart", // or "custodial"
+    config: {},
+    owner: {},
   };
 
   const r = await axios.post(url, body, {
@@ -46,8 +49,9 @@ async function sendTxServer({
   to,
   amount,
   token = "USDC",
-  chain = "polygon",
+  chain = "solana",
 }) {
+  // Example pseudo-request:
   const url = `https://staging.crossmint.com/api/2025-06-09/wallets/{walletLocator}/transactions`; // confirm path in docs
   const body = {
     projectId: PROJECT_ID,
