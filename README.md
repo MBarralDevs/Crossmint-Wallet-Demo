@@ -15,7 +15,7 @@ This is a minimal example intended for the Crossmint CSE case study. The backend
 
 1. Clone the repo:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MBarralDevs/Crossmint-Wallet-Demo
 cd crossmint-wallet-demo
 ```
 2. Backend: 
